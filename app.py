@@ -4,9 +4,9 @@ import pickle
 import mediapipe as mp
 import numpy as np
 
-app = Flask(__name__, template_folder='../templates', static_folder='../static')
+app = Flask(__name__, template_folder='./templates', static_folder='./static')
 
-model_dict = pickle.load(open('./backend/model.p', 'rb'))
+model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
 
 mp_hands = mp.solutions.hands
@@ -54,4 +54,4 @@ def video_feed():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
