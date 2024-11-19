@@ -6,7 +6,6 @@ import numpy as np
 
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
-model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
 
 mp_hands = mp.solutions.hands
