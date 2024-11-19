@@ -1,5 +1,0 @@
-Flask
-mediapipe
-opencv-python
-scikit-learn
-numpy
