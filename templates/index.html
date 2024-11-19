@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Language Translator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" id="theme-toggle">Switch Theme</button>
+    <h1>Sign Language Translator</h1>
+    <div class="video-container">
+      <img src="/video_feed" alt="Live Video Stream" />
+    </div>
+    <p>Developed by <b>Anushka Phogat</b> and <b>Swapnil Chhibber</b></p>
+    <script>
+      const themeToggleButton = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      themeToggleButton.addEventListener("click", () => {
+        body.classList.toggle("pink-theme");
+        themeToggleButton.textContent = body.classList.contains("pink-theme")
+          ? "Switch to Blue Theme"
+          : "Switch to Pink Theme";
+      });
+    </script>
+  </body>
+</html>
